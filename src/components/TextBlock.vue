@@ -15,7 +15,7 @@
       <button class="close__btn" @click="removeBlock">x</button>
     </div>
     <div class="text-block__body">
-      {{ textValue }}
+      {{getCorrectTextValue(textValue)}}
     </div>
   </div>
 </template>
@@ -25,7 +25,7 @@ export default {
   name: "TextBlock",
   props: {
     id: {
-      type: Number,
+      type: String,
       required: true
     },
     textValue: {
@@ -46,6 +46,9 @@ export default {
     }
   },
   methods: {
+    getCorrectTextValue(value) {
+      return value.length <= 80 ? value : (value = `${value.slice(0, 79)}...`);
+    },
     removeBlock(e) {
       e.preventDefault();
       e.stopPropagation();
@@ -93,6 +96,7 @@ export default {
   border: 1px solid gray;
   border-top-right-radius: 5px;
   border-top-left-radius: 5px;
+  background-color: white;
   .text-block__upper-panel {
     display: flex;
     flex-flow: row nowrap;

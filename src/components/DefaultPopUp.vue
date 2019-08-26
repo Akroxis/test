@@ -52,8 +52,8 @@ export default {
   justify-content: center;
   align-items: center;
   .new-contact-pop__content {
-    height: 200px;
-    width: 300px;
+    min-height: 200px;
+    min-width: 300px;
     background: #ffffff;
     box-shadow: 2px 2px 20px 1px;
     overflow-x: auto;
@@ -83,15 +83,7 @@ export default {
     .modal-body {
       height: 100%;
       padding: 20px 10px;
-        .confirm__btn {
-            background-color: DodgerBlue;
-            border: none;
-            color: white;
-            padding: 5px 15px;
-            cursor: pointer;
-            font-size: 14px;
-            margin: 30px auto;
-        }
+
     }
   }
 }

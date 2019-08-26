@@ -5,28 +5,7 @@ Vue.use(Vuex);
 
 export default new Vuex.Store({
   state: {
-    textBlocks: [
-      {
-        id: 0,
-        textValue: "113131313",
-        isComplexBlock: true,
-        complexBlockColor: "red",
-        isSelected: true
-      },
-      {
-        id: 1,
-        textValue: "asdsad",
-        isComplexBlock: true,
-        complexBlockColor: "green",
-        isSelected: true
-      },
-      {
-        id: 2,
-        textValue: "___dsa____dsad_",
-        isComplexBlock: false,
-        isSelected: true
-      }
-    ]
+    textBlocks: []
   },
   getters: {
     getAllBlocks(state) {
